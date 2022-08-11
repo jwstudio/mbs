@@ -1,0 +1,105 @@
+@import "variables.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.accordion {
+    font-size: 17px;
+    margin: 0 20px;
+}
+
+#viewmore {
+    color: $primary;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+#viewmore:hover {
+    text-decoration: underline;
+}
+  
+.accordion__button {
+    margin: 10px 0;
+    padding: 10px 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: inherit;
+    cursor: pointer;
+    color: black;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+  
+.accordion__button span {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: white;
+    // border: 3px white solid;
+    font-size: 15px;
+}
+
+.accordion__button span:hover {
+    background-color: black;
+    color: white;
+}
+  
+.accordion__button:focus {
+    outline: none;
+    background-color: #f0f0f0;
+}
+  
+.accordion__content {
+    // padding: 0 20px;
+    display: none;
+    // transition: all .5s;
+    // height: 0;
+    // margin: 0;
+    // margin-top: -10px;
+    // border: 3px black solid;
+    // background-color: white;
+    // border-top: 0;
+}
+  
+.accordion__content.active {
+      height: auto;
+      display: block;
+      padding: 0px;
+}
+
+#accordianSection {
+    margin-left: 16.67%;
+    margin-right: 16.67%;
+    // #F0F0F0;
+    background-color: white;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #accordianSection {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+        border-radius: 0;
+    }
+}
+
+#anyOther { 
+    background-color: #f0f0f0;
+    padding: 15px 0px;
+    text-align: center;
+}
